@@ -7,16 +7,17 @@ import base64
 from flask import Flask, request, jsonify, send_file
 from gradio_client import Client
 from huggingface_hub import InferenceClient
+from dotenv import load_dotenv
 
-
-genai.configure(api_key)
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 text_model = genai.GenerativeModel("models/gemini-1.5-flash")
 # image_model = Client("armen425221356/UnfilteredAI-NSFW-gen-v2_self_parms")
 # 
 image_model = InferenceClient(
     # model="black-forest-labs/FLUX.1-schnell",
-    token,
+    token=os.getenv("token"),
 )
 app = Flask(__name__)
 
