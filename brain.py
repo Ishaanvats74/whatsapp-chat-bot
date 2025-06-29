@@ -40,7 +40,7 @@ def reply():
                 num_inference_steps=50,
                 width=512,
                 height=512,
-                model="stabilityai/stable-diffusion-2"
+                model="stabilityai/stable-diffusion-xl-base-1.0"
                
             )
             buffer = BytesIO()
