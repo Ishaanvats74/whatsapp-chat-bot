@@ -1,8 +1,9 @@
-const qrcode = require("qrcode-terminal");
-const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+import qrcode from "qrcode-terminal";
+import pkg from 'whatsapp-web.js';
+const { Client, LocalAuth, MessageMedia } = pkg;
+import axios from "axios";
+import fs from "fs";
+import path from "path";
 
 const client = new Client({
   authStrategy: new LocalAuth({ clientId: "my-whatsapp-bot" }),
