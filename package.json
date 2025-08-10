@@ -9,7 +9,8 @@
     "build": "echo 'No build step needed'",
     "dev": "node bot.js",
     "install-deps": "npm install",
-    "clean": "rm -rf node_modules package-lock.json && npm install"
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "postinstall": "npx puppeteer install --with-deps"
   },
   "dependencies": {
     "whatsapp-web.js": "^1.23.0",
@@ -22,7 +23,7 @@
     "@types/node": "^20.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   },
   "keywords": [
     "whatsapp",
