@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node bot.js",
+    "build": "echo 'No build step needed'",
     "dev": "node bot.js",
     "install-deps": "npm install",
     "clean": "rm -rf node_modules package-lock.json && npm install"
