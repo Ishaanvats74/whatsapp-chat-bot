@@ -1,56 +1,39 @@
 {
   "name": "whatsapp-ai-bot",
-  "version": "2.0.0",
-  "description": "Enhanced WhatsApp AI Bot with image generation and Hindi support",
+  "version": "1.0.0",
+  "description": "AI-powered WhatsApp bot with image generation",
   "main": "bot.js",
   "type": "module",
   "scripts": {
     "start": "node bot.js",
-    "dev": "nodemon bot.js",
+    "dev": "node bot.js",
     "install-deps": "npm install",
-    "clean": "rm -rf .wwebjs_auth && rm -rf .wwebjs_cache",
-    "reset": "npm run clean && npm install",
-    "test": "node --version && npm --version"
+    "clean": "rm -rf node_modules package-lock.json && npm install"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "axios": "^1.6.0",
+    "puppeteer": "^21.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "ai",
-    "gemini",
-    "huggingface",
-    "image-generation",
-    "hindi",
+    "chatbot",
     "automation"
   ],
-  "author": "WhatsApp Bot Developer",
+  "author": "Your Name",
   "license": "MIT",
-  "dependencies": {
-    "whatsapp-web.js": "^1.23.0",
-    "axios": "^1.6.0",
-    "qrcode-terminal": "^0.12.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/whatsapp-ai-bot.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/whatsapp-ai-bot/issues"
-  },
-  "homepage": "https://github.com/yourusername/whatsapp-ai-bot#readme",
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ]
+    "url": "your-repo-url"
+  }
 }
