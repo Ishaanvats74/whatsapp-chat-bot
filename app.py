@@ -32,7 +32,7 @@ def reply():
         print(f"Received message: {user_msg }")
 
         if any(word.lower() in ["generate", "create", "make", "draw", "image", "picture", "photo"] for word in user_msg.split()):
-            # response = image_model.predict(prompt=user_msg,negative_prompt="(low quality, worst quality:1.2), very displeasing, 3d, watermark, signature, ugly, poorly drawn, (deformed | distorted | disfigured:1.3), bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, mutated hands and fingers:1.4, disconnected limbs, blurry, amputation.",num_inference_steps=60,guidance_scale=7,width=512,height=512,num_samples=1,api_name="/predict")
+            response = image_model.predict(prompt=user_msg,negative_prompt="(low quality, worst quality:1.2), very displeasing, 3d, watermark, signature, ugly, poorly drawn, (deformed | distorted | disfigured:1.3), bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, mutated hands and fingers:1.4, disconnected limbs, blurry, amputation.",num_inference_steps=60,guidance_scale=7,width=512,height=512,num_samples=1,api_name="/predict")
             response = image_model.text_to_image(
                 prompt=user_msg,
                 negative_prompt="low quality, blurry, distorted",
