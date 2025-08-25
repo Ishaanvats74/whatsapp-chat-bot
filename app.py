@@ -13,10 +13,10 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 text_model = genai.GenerativeModel("models/gemini-1.5-flash")
-# image_model = Client("armen425221356/UnfilteredAI-NSFW-gen-v2_self_parms")
+image_model = Client("armen425221356/UnfilteredAI-NSFW-gen-v2_self_parms")
 # 
 image_model = InferenceClient(
-    # model="black-forest-labs/FLUX.1-schnell",
+    model="black-forest-labs/FLUX.1-schnell",
     token=os.getenv("token"),
 )
 app = Flask(__name__)
